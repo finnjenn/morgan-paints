@@ -1,0 +1,135 @@
+<nav>
+    <button id="nav-toggle" aria-controls="primary-nav" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+      </button>
+    <a href="#home" id="logo-link">
+        <!-- Pick Image OR Text -->
+        <!-- <img src="/images/logo.svg" alt="Logo" id="logo"> -->
+        <span id="logo-text">MORGAN PAINTS</span>
+    </a>
+    <ul id="primary-nav" data-mobile-nav-visible="false">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+        <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li class="nav-item"><a href="/gallery" class="nav-link">Gallery</a></li>
+        <li id="estimate-btn" class="nav-item"><a href="#quote" class="nav-link">Free Estimate</a></li>
+    </ul>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background-color: white;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    #nav-toggle {
+        display: none;
+        cursor: pointer;
+        z-index: 9999;
+    }
+    #logo-link {
+        padding: 1rem;
+        background: url("/tiedye2.jpeg") no-repeat center bottom;
+        color: transparent;
+        background-size: 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    #logo {
+        display: inline;
+    }
+    #logo-text {
+        margin: auto 0;
+        font-weight: 700;
+        font-size: 1.75rem;
+        letter-spacing: 1px;
+    }
+    #primary-nav {
+        display: flex;
+        align-items: baseline;
+        margin-left: auto;
+    }
+    .nav-item {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        transition: 200ms;
+    }
+    .nav-item:hover {
+        transform: translateY(-2px);
+    }
+    #estimate-btn {
+        background-image: url("/tiedye2.jpeg");
+        background-position: center;
+        background-size: 100%;
+        color: white;
+        text-shadow: 2px 2px 6px black;
+        margin: 0.5rem;
+        border-radius: 0.5rem;
+    }
+    @media (max-width: 62rem) {
+        #nav-toggle {
+            display: block;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background-image: url("/menu.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-color: transparent;
+            width: 2rem;
+            height: 2rem;
+            border: none;
+        }
+        #nav-toggle[aria-expanded="true"] {
+            background-image: url("/x.svg");
+        }
+        #primary-nav {
+            z-index: 999;
+            position: fixed;
+            padding-top: 4rem;
+            /* Change last percentage for how far menu slides out */
+            inset: 0 0 0 40%;
+            transform: translateX(100%);
+            flex-direction: column;
+            align-items: start;
+            transition: 500ms ease-in-out;
+            background-color: white;
+        }
+        #primary-nav[data-mobile-nav-visible="true"] {
+            transform: translateX(0%);
+        }
+        .nav-item {
+            padding: 1rem 1rem;
+        }
+    }
+    @media (max-width: 30rem) {
+        #logo-text {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+<script>
+    const primaryNav = document.querySelector("#primary-nav");
+    const navToggle = document.querySelector("#nav-toggle");
+    navToggle.addEventListener("click", () => {
+      console.log("nav toggle clicked");
+      const isNavVisible = primaryNav.getAttribute("data-mobile-nav-visible");
+      if (isNavVisible === "false") {
+        primaryNav.setAttribute("data-mobile-nav-visible", "true");
+        navToggle.setAttribute("aria-expanded", "true");
+      } else {
+        primaryNav.setAttribute("data-mobile-nav-visible", "false");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>

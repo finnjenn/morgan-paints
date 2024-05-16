@@ -1,0 +1,175 @@
+<section id="services">
+    <h1>Your One-Stop Solution for Home Improvements</h1>
+    <h2>Painting Services</h2>
+    <div id="painting">
+        <div class="paint-item">
+            <img src="/interior.jpeg" alt="Room with beautifully painted walls">
+            <h3>
+                <img class="icon" src="/paint-roller-icon.svg" alt="Paint Roller Icon">
+                Interior Painting</h3>
+        </div>
+        <div class="paint-item">
+            <img src="/exterior.jpeg" alt="Team Painting House Exterior">
+            <h3>
+                <img class="icon" src="/paint-roller-icon.svg" alt="Paint Roller Icon">
+                Exterior Painting</h3>
+        </div>
+    </div>
+    <h2>Remodeling Services</h2>
+    <div id="remodeling">
+        <div class="remodeling-item">
+            <img src="/kitchen.jpeg" alt="Beautiful kitchen">
+            <h3>
+                <img class="icon" src="/chef-hat.svg" alt="Chef's hat icon">
+                Kitchen Remodeling
+            </h3>
+        </div>
+        <div class="remodeling-item">
+            <img src="/bathroom.jpeg" alt="Modern bathroom">
+            <h3>
+                <img src="/bath.svg" alt="Bathtub icon" class="icon">
+                Bathroom Remodeling
+            </h3>
+        </div>
+        <div class="remodeling-item">
+            <img src="/carpentry.jpeg" alt="Expertly crafted wooden shelves">
+            <h3>
+                <img src="/hammer.svg" alt="Hammer icon" class="icon">
+                Carpentry
+            </h3>
+        </div>
+        <div class="remodeling-item">
+            <img src="/flooring.jpeg" alt="clean and elegant floors">
+            <h3>
+                <img src="/floor.svg" alt="floor icon" class="icon">
+                Flooring
+            </h3>
+        </div>
+    </div>
+    <p>We Also Provide Decking, Staining, Drywall Installation, and More!</p>
+    <a href="#quote">Get a Free Estimate Now!</a>
+</section>
+
+<style>
+    #services {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    h1 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 1.75rem;
+        padding: 4rem 1rem 0 1rem;
+    }
+    h2 {
+        font-weight: 700;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transition: 300ms;
+    }
+    h2:hover {
+        background: url("/tiedye2.jpeg") no-repeat center bottom;
+        color: transparent;
+        background-size: 30%;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    #painting {
+        display: flex;
+        justify-content: center;
+    }
+    .paint-item {
+        /* border: 1px solid red; */
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+    }   
+    .paint-item:hover h3,
+    .remodeling-item:hover h3 {
+        background: url("/tiedye2.jpeg") no-repeat center bottom;
+        color: transparent;
+        background-size: 150%;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    .paint-item:hover .icon,
+    .remodeling-item:hover .icon {
+        transform: translateY(5px);
+    }
+    img {
+        width: max(70%, 300px);
+        aspect-ratio: 1;
+        object-fit: cover;
+        box-shadow: 5px 5px 20px rgb(80, 80, 80);
+        margin-bottom: 3rem;
+    }
+    .icon {
+        width: 1.5rem;
+        object-fit: contain;
+        box-shadow: none;
+        margin: 0 0.5rem 0 0;
+        display: inline-block;
+        transition: 300ms;
+    }
+    h3 {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 200ms;
+    }
+    #remodeling {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .remodeling-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 1rem 2rem 1rem;
+    }
+    .remodeling-item h3 {
+        font-size: 1.1rem;
+    }
+    .remodeling-item .icon {
+        transform: translateY(3px);
+    }
+    p {
+        margin: 1rem 1rem 1.5rem 1rem;
+        line-height: 2rem;
+        font-weight: 600;
+        text-wrap: balance;
+    }
+    a {
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+        transition: 200ms;
+        background: url("/tiedye2.jpeg") no-repeat center bottom;
+        color: transparent;
+        background-size: 150%;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    a:hover {
+        transform: translateY(-3px);
+    }
+    @media (max-width: 80rem) {
+        #remodeling {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media (max-width: 45rem) {
+        #painting {
+            flex-direction: column;
+        }   
+        .paint-item:nth-of-type(1) {
+            margin-bottom: 3rem;
+        }
+        #remodeling {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

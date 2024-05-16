@@ -1,0 +1,94 @@
+<main id="home">
+    <section id="content">
+        <h1>Welcome to Morgan Paints & Remodeling</h1>
+        <h2>Expert Painting, Home Remodeling, and Carpentry Services</h2>
+        <h3>Over <span>40 Years</span> of Trusted Home Transformations</h3>
+    </section>
+    <div id="btn-box">
+        <a href="#services">Learn More</a>
+        <a href="#quote">Get Your Free Quote</a>
+    </div>
+</main>
+
+<style>
+    #home {
+        height: 90vh;
+        background-image: url("/home.jpeg");
+        background-position: center 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #content {
+        background-color: white;
+        font-family: "Karla", Arial, Helvetica, sans-serif;
+        padding: 1.5rem 2rem;
+        max-width: 50%;
+        margin-bottom: 2rem;
+        box-shadow: 5px 3px 20px rgb(80, 80, 80);
+    }
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+    }
+    h2 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-wrap: balance;
+    }
+    h3 {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+    span {
+        font-weight: 700;
+        background: url("/tiedye2.jpeg") no-repeat center bottom;
+        color: transparent;
+        background-size: 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    a {
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+        margin: 0 1rem 1rem 1rem;
+        display: inline-block;
+        box-shadow: 5px 5px 20px rgb(80, 80, 80);
+        transition: 200ms;
+    }
+    a:hover {
+        transform: translateY(-3px);
+        box-shadow: none;
+    }
+    @media (max-width: 62rem) {
+        #home {
+            background-position: 65% 45%;
+        }
+    }
+    @media (max-width: 45rem) {
+        #home {
+            /* flex-direction: column; */
+            /* justify-content: center; */
+            align-items: center;
+            background-position: 75% 45%;
+        }
+        #content {
+            max-width: 90%;
+            margin-top: 8rem;
+            /* border-radius: 0.5rem; */
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+        h2 {
+            font-size: 0.9rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+        }
+    }
+</style>
