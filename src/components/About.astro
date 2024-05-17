@@ -1,0 +1,85 @@
+<section id="about">
+    <div id="about-content">
+        <h1>About Us</h1>
+        <h2>Delivering Promises With Quality and Care</h2>
+        <p>At Morgan Paints & Remodeling, we believe in delivering exactly what we promise. With over 40 years of experience, Paul Morgan and his team have been transforming homes in Southwest Virginia for over a decade. Guided by values such as integrity, honesty, trust, and communication, we ensure every project reflects our commitment to excellence. Rooted in family, faith, and strong morals, we take pride in our work and cherish the positive feedback from our high-end clients.</p>
+        <a href="#services">Explore Services <img id="arrow" src="/arrow-right.svg" alt=""> </a>
+    </div>
+    <img id="paul" src="/paul.jpeg" alt="">
+</section>
+
+<style>
+    #about {
+        display: flex;
+        padding: 0 2rem;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+    #about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 3rem;
+    }
+    h1 {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        /* margin-left: 1rem; */
+        /* transform: translateY(3rem); */
+    }
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    p {
+        letter-spacing: 1px;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    #paul {
+        width: 30rem;
+        height: 30rem;
+        object-fit: cover;
+        object-position: left;
+        border-radius: 5rem;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1.25rem;
+        /* border: 1px solid black; */
+        /* display: inline; */
+    }
+    a:hover #arrow {
+        margin-left: 1rem;
+    }
+    #arrow {
+        display: inline-block;
+        transform: translateY(5px);
+        margin-left: 0.5rem;
+        transition: 300ms;
+    }
+    @media (max-width: 65rem) {
+        #about {
+            flex-direction: column;
+        }
+        #about-content {
+            margin-bottom: 3rem;
+            padding-right: 1rem;
+        }
+        #paul {
+            width: auto;
+            height: 25rem;
+            border-radius: 0;
+        }
+    }
+    @media (max-width: 31rem) {
+        #paul {
+            width: 100%;
+            height: auto;
+        }
+    }
+</style>
