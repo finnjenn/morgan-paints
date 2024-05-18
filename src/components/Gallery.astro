@@ -1,0 +1,44 @@
+<section>
+    <h1>Experience Our Quality Work</h1>
+    <div>
+      <img src="/gallery/g1.jpeg" alt="">  
+      <img src="/gallery/g2.jpeg" alt="">  
+      <img src="/gallery/g3.jpeg" alt="">  
+      <img src="/gallery/g4.jpeg" alt="">  
+    </div>
+    <a href="/gallery">Explore More Stunning Transformations</a>
+</section>
+
+<style>
+    section {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+    div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+    img {
+        width: 20rem;
+        aspect-ratio: 1;
+        object-fit: cover;
+        margin: 0 auto 0rem auto;
+    }
+    a {
+        display: inline-block;
+        margin-top: 2.5rem;
+        color: black;
+    }
+    @media (max-width: 62rem) {
+        div {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+</style>
