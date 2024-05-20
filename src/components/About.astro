@@ -4,9 +4,9 @@
         <h1>About Us</h1>
         <h2>Delivering Promises With Quality and Care</h2>
         <p>At Morgan Paints & Remodeling, we believe in delivering exactly what we promise. With over 40 years of experience, Paul Morgan and his team have been transforming homes in Southwest Virginia for over a decade. Guided by values such as integrity, honesty, trust, and communication, we ensure every project reflects our commitment to excellence. Rooted in family, faith, and strong morals, we take pride in our work and cherish the positive feedback from our high-end clients.</p>
-        <a href="#services">Explore Services <img id="arrow" src="/arrow-right.svg" alt=""> </a>
+        <a href="#services">Explore Services <img id="arrow" src="/arrow-right.svg" alt="Arrow pointing right icon"> </a>
     </div>
-    <img id="paul" src="/paul.jpeg" alt="">
+    <img id="paul" src="/paul.jpeg" alt="Paul Morgan and Grandchild">
 </section>
 
 <style>
@@ -14,7 +14,7 @@
         display: flex;
         padding: 0 2rem;
         align-items: center;
-        margin-bottom: 7rem;
+        margin-bottom: 5rem;
     }
     #about-content {
         display: flex;
@@ -45,10 +45,14 @@
     }
     a {
         text-decoration: none;
-        color: black;
         text-transform: uppercase;
         font-weight: 300;
         font-size: 1.25rem;
+        background: url("/tiedye2.jpeg") no-repeat center;
+        color: transparent;
+        background-size: 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
     }
     a:hover #arrow {
         margin-left: 1rem;
